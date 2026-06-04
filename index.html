@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sweety Song Fetal Doppler — Healthcare Provider Expert Evaluation Survey for India Market Launch by Easy Healthcare India & Premom India." />
+  <title>Sweety Song Fetal Doppler — HCP Expert Evaluation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <!-- Confetti Canvas -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- ============ HEADER ============ -->
+  <header class="survey-header" id="survey-header">
+    <div class="header-inner">
+      <div class="brand-row">
+        <div class="brand-logo">
+          <span class="logo-icon">🤰</span>
+          <div class="logo-text">
+            <span class="logo-main">sweetie<em>song</em></span>
+            <span class="logo-sub">pocket fetal doppler</span>
+          </div>
+        </div>
+        <div class="brand-partners">
+          <span class="partner easy">easy<span class="at">@</span>Home</span>
+          <span class="partner-divider">×</span>
+          <span class="partner premom">prem<span class="om">♡</span>m</span>
+        </div>
+      </div>
+      <div class="header-content">
+        <h1>HCP Expert Evaluation</h1>
+        <p class="header-subtitle">India Market Launch · Confidential Feedback</p>
+      </div>
+    </div>
+    <div class="header-hearts">
+      <span>♥</span><span>♥</span><span>♥</span><span>♥</span><span>♥</span>
+      <span>♥</span><span>♥</span><span>♥</span><span>♥</span><span>♥</span>
+    </div>
+  </header>
+
+  <!-- ============ INTRO ============ -->
+  <div class="intro-card" id="intro-card">
+    <div class="intro-inner">
+      <h2>Dear Healthcare Provider,</h2>
+      <p>Thank you for being a valued clinical partner in the India launch of the <strong>Sweety Song Pocket Fetal Doppler</strong>. We'd love to hear your honest feedback to help us improve this product for Indian mothers.</p>
+
+      <button class="btn-primary btn-start" id="btn-start">Begin Evaluation →</button>
+    </div>
+  </div>
+
+  <!-- ============ PROGRESS BAR ============ -->
+  <div class="progress-container" id="progress-container">
+    <div class="progress-steps">
+      <div class="step active" data-step="1"><span class="step-num">1</span><span class="step-label">About You</span></div>
+      <div class="step" data-step="2"><span class="step-num">2</span><span class="step-label">Product</span></div>
+      <div class="step" data-step="3"><span class="step-num">3</span><span class="step-label">Clinical Value & App</span></div>
+      <div class="step" data-step="4"><span class="step-num">4</span><span class="step-label">Endorsements</span></div>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+  </div>
+
+  <!-- ============ SURVEY BODY ============ -->
+  <main class="survey-body" id="survey-body">
+
+    <!-- ====== SECTION 1: ABOUT YOU ====== -->
+    <section class="section active" id="section-1" data-section="1">
+      <div class="section-header">
+        <span class="section-icon">🩺</span>
+        <div>
+          <h2>About You</h2>
+          <p class="section-desc">Help us understand your clinical context</p>
+        </div>
+      </div>
+
+      <!-- Q1 -->
+      <div class="question" id="q1">
+        <label class="question-label"><span class="q-num">Q1</span> Your Details</label>
+        <div class="compound-fields">
+          <div class="field-row">
+            <div class="field">
+              <label class="field-label">Full Name <span class="req">*</span></label>
+              <input type="text" class="text-input" id="q1-name" placeholder="Dr. " required />
+            </div>
+            <div class="field">
+              <label class="field-label">Years in Practice</label>
+              <select class="select-input" id="q1-years">
+                <option value="">Select</option>
+                <option value="0-5">0–5 years</option>
+                <option value="6-15">6–15 years</option>
+                <option value="15+">15+ years</option>
+              </select>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label class="field-label">Specialization <span class="req">*</span></label>
+              <select class="select-input" id="q1-spec">
+                <option value="">Select specialization</option>
+                <option value="obgyn">Obstetrician / Gynaecologist</option>
+                <option value="gp">GP with Maternal Care</option>
+                <option value="midwife">Midwife / Nurse Practitioner</option>
+                <option value="sonologist">Sonologist / Radiologist</option>
+                <option value="paediatrician">Paediatrician / Neonatologist</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="question" id="q2">
+        <label class="question-label"><span class="q-num">Q2</span> Your Practice</label>
+        <div class="compound-fields">
+          <div class="field-row">
+            <div class="field">
+              <label class="field-label">City</label>
+              <input type="text" class="text-input" id="q2-city" placeholder="e.g. Mumbai" />
+            </div>
+            <div class="field">
+              <label class="field-label">State</label>
+              <input type="text" class="text-input" id="q2-state" placeholder="e.g. Maharashtra" />
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label class="field-label">Practice Setting</label>
+              <select class="select-input" id="q2-setting">
+                <option value="">Select setting</option>
+                <option value="govt">Government / Public Hospital</option>
+                <option value="private-hospital">Private Hospital / Nursing Home</option>
+                <option value="solo-clinic">Solo Private Clinic</option>
+                <option value="multi-spec">Multi-Speciality Group</option>
+                <option value="chc-phc">CHC / PHC</option>
+                <option value="tele">Telehealth / Home-visit</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="field-label">Pregnant Patients / Month</label>
+              <select class="select-input" id="q2-volume">
+                <option value="">Select</option>
+                <option value="1-15">1–15</option>
+                <option value="16-40">16–40</option>
+                <option value="40+">40+</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ====== SECTION 2: PRODUCT EXPERIENCE ====== -->
+    <section class="section" id="section-2" data-section="2">
+      <div class="section-header">
+        <span class="section-icon">⭐</span>
+        <div>
+          <h2>Product Experience</h2>
+          <p class="section-desc">Rate the Sweety Song Doppler hardware</p>
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="question" id="q4">
+        <label class="question-label"><span class="q-num">Q4</span> Build Quality & Durability</label>
+        <p class="question-sublabel">Body material, button feel, LCD screen, speaker grille finish</p>
+        <div class="star-rating" id="stars-q4" data-question="q4">
+          <div class="stars-row">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+          <span class="star-label" id="star-label-q4">Click to rate</span>
+        </div>
+      </div>
+
+      <!-- Q5 -->
+      <div class="question" id="q5">
+        <label class="question-label"><span class="q-num">Q5</span> Audio Clarity & Heart Rate Accuracy</label>
+        <p class="question-sublabel">Clean heartbeat sound, minimal static, accurate BPM vs. your clinical equipment</p>
+        <div class="star-rating" id="stars-q5" data-question="q5">
+          <div class="stars-row">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+          <span class="star-label" id="star-label-q5">Click to rate</span>
+        </div>
+      </div>
+
+      <!-- Q6 -->
+      <div class="question" id="q6">
+        <label class="question-label"><span class="q-num">Q6</span> Ergonomics & Ease of Use</label>
+        <p class="question-sublabel">Grip comfort, weight, probe handling, coiled cord flexibility</p>
+        <div class="star-rating" id="stars-q6" data-question="q6">
+          <div class="stars-row">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+          <span class="star-label" id="star-label-q6">Click to rate</span>
+        </div>
+      </div>
+
+      <!-- Q7 -->
+      <div class="question" id="q7">
+        <label class="question-label"><span class="q-num">Q7</span> 3.0 MHz Probe Sensitivity</label>
+        <p class="question-sublabel">Detection across gestational ages and varying maternal body types common in India</p>
+        <div class="star-rating" id="stars-q7" data-question="q7">
+          <div class="stars-row">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+          <span class="star-label" id="star-label-q7">Click to rate</span>
+        </div>
+      </div>
+
+      <!-- Q8 -->
+      <div class="question" id="q8">
+        <label class="question-label"><span class="q-num">Q8</span> Your Recommendations</label>
+        <p class="question-sublabel">What features or improvements would you recommend for this device?</p>
+        <textarea class="textarea" id="q8-text" rows="4" placeholder="Share your recommendations…"></textarea>
+      </div>
+    </section>
+
+    <!-- ====== SECTION 3: EMOTIONAL & CLINICAL VALUE ====== -->
+    <section class="section" id="section-3" data-section="3">
+      <div class="section-header">
+        <span class="section-icon">💜</span>
+        <div>
+          <h2>Emotional &amp; Clinical Value</h2>
+          <p class="section-desc">How this device impacts mothers and your practice</p>
+        </div>
+      </div>
+
+      <!-- Q9 — Emoji Picker -->
+      <div class="question" id="q9">
+        <label class="question-label"><span class="q-num">Q9</span> Emotional Reassurance for Mothers</label>
+        <p class="question-sublabel">How effectively does this device reduce maternal anxiety between clinic visits?</p>
+        <div class="emoji-picker" id="emoji-q9">
+          <button class="emoji-option" data-value="1" data-label="Increases Anxiety" type="button">
+            <span class="emoji-icon">😟</span>
+            <span class="emoji-text">Increases Anxiety</span>
+          </button>
+          <button class="emoji-option" data-value="2" data-label="Uncertain Impact" type="button">
+            <span class="emoji-icon">😕</span>
+            <span class="emoji-text">Uncertain</span>
+          </button>
+          <button class="emoji-option" data-value="3" data-label="Neutral" type="button">
+            <span class="emoji-icon">😐</span>
+            <span class="emoji-text">Neutral</span>
+          </button>
+          <button class="emoji-option" data-value="4" data-label="Reassuring" type="button">
+            <span class="emoji-icon">🙂</span>
+            <span class="emoji-text">Reassuring</span>
+          </button>
+          <button class="emoji-option" data-value="5" data-label="Deeply Comforting" type="button">
+            <span class="emoji-icon">🥰</span>
+            <span class="emoji-text">Deeply Comforting</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Q10 — NPS -->
+      <div class="question" id="q10">
+        <label class="question-label"><span class="q-num">Q10</span> Recommendation to Patients</label>
+        <p class="question-sublabel">How likely are you to recommend the Sweety Song Doppler to your expecting patients for home use?</p>
+        <div class="nps-scale" id="nps-q10">
+          <div class="nps-buttons">
+            <button class="nps-btn detractor" data-value="0" type="button">0</button>
+            <button class="nps-btn detractor" data-value="1" type="button">1</button>
+            <button class="nps-btn detractor" data-value="2" type="button">2</button>
+            <button class="nps-btn detractor" data-value="3" type="button">3</button>
+            <button class="nps-btn detractor" data-value="4" type="button">4</button>
+            <button class="nps-btn detractor" data-value="5" type="button">5</button>
+            <button class="nps-btn detractor" data-value="6" type="button">6</button>
+            <button class="nps-btn passive" data-value="7" type="button">7</button>
+            <button class="nps-btn passive" data-value="8" type="button">8</button>
+            <button class="nps-btn promoter" data-value="9" type="button">9</button>
+            <button class="nps-btn promoter" data-value="10" type="button">10</button>
+          </div>
+          <div class="nps-labels">
+            <span class="nps-label-left">Not at all likely</span>
+            <span class="nps-label-right">Extremely likely</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Q10c — Help for Patients With Issues -->
+      <div class="question" id="q10c">
+        <label class="question-label"><span class="q-num">Q10c</span> Helping Patients Who Struggle to Hear</label>
+        <p class="question-sublabel">What would you recommend to support patients who have difficulty finding or hearing the heartbeat?</p>
+        <textarea class="textarea" id="q10c-comment" rows="4" placeholder="Share your recommendations…"></textarea>
+      </div>
+
+      <!-- Q11 — Doppler + App Rating -->
+      <div class="question" id="q11">
+        <label class="question-label"><span class="q-num">Q11</span> Doppler + App Experience</label>
+        <p class="question-sublabel">How would you rate the overall experience of using the fetal doppler sound quality and the Premom app recording features together?</p>
+        <div class="reference-image" style="margin:1rem 0; text-align:center;">
+          <img src="premom-recording.png" alt="Premom App - Record and Share Baby's Heartbeat" style="max-width:320px; width:100%; border-radius:12px; box-shadow:0 4px 20px rgba(155,109,181,0.15);" />
+          <p style="font-size:0.8rem; color:#999; margin-top:0.5rem; font-style:italic;">Reference: Premom app recording feature</p>
+        </div>
+        <div class="star-rating" id="stars-q11" data-question="q11">
+          <div class="stars-row">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+          <span class="star-label" id="star-label-q11">Click to rate</span>
+        </div>
+      </div>
+
+      <!-- Q13 — App Feature Wishlist -->
+      <div class="question" id="q13">
+        <label class="question-label"><span class="q-num">Q13</span> App Feature Wishlist</label>
+        <p class="question-sublabel">Which features would you most like to see in the Premom app? <strong>Select all that apply.</strong></p>
+        <div class="checkbox-group">
+          <label class="checkbox-item"><input type="checkbox" name="q13" value="recording" /><span class="checkbox-custom"></span><span>💾 Heartbeat recording &amp; sharing with family</span></label>
+          <label class="checkbox-item"><input type="checkbox" name="q13" value="trends" /><span class="checkbox-custom"></span><span>📈 Heart rate trend tracking over time</span></label>
+          <label class="checkbox-item"><input type="checkbox" name="q13" value="doctor-dashboard" /><span class="checkbox-custom"></span><span>👨‍⚕️ Doctor dashboard to view patient readings</span></label>
+          <label class="checkbox-item"><input type="checkbox" name="q13" value="video-tutorials" /><span class="checkbox-custom"></span><span>🎥 Video tutorials for how to use the doppler</span></label>
+          <label class="checkbox-item"><input type="checkbox" name="q13" value="multilingual" /><span class="checkbox-custom"></span><span>🌐 Multilingual app interface</span></label>
+          <label class="checkbox-item"><input type="checkbox" name="q13" value="teleconsult" /><span class="checkbox-custom"></span><span>📞 One-tap teleconsultation with OB-GYN</span></label>
+        </div>
+        <div class="sub-question" style="margin-top:1rem;">
+          <label class="field-label">Any other features you'd like to see?</label>
+          <textarea class="textarea" id="q13-other" rows="2" placeholder="Tell us…"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SECTION 4: ENDORSEMENTS & CLOSING ====== -->
+    <section class="section" id="section-4" data-section="4">
+      <div class="section-header">
+        <span class="section-icon">🏅</span>
+        <div>
+          <h2>Endorsements &amp; Final Thoughts</h2>
+          <p class="section-desc">Your professional endorsement builds patient trust</p>
+        </div>
+      </div>
+
+      <!-- Q18 — Endorsement batch -->
+      <div class="question" id="q18">
+        <label class="question-label"><span class="q-num">Q18</span> Professional Endorsements</label>
+        <p class="question-sublabel">Please indicate your agreement. Endorsed statements may be used in our Amazon listing and marketing materials with your permission.</p>
+        <div class="endorsement-grid" id="endorsement-grid">
+          <div class="endorsement-item">
+            <p class="endorsement-text">"The Sweety Song provides sufficiently accurate fetal heart rate readings for consumer-grade home use when used as directed."</p>
+            <div class="agree-scale">
+              <label class="agree-btn"><input type="radio" name="e1" value="strongly-agree" /><span>Strongly Agree</span></label>
+              <label class="agree-btn"><input type="radio" name="e1" value="agree" /><span>Agree</span></label>
+              <label class="agree-btn"><input type="radio" name="e1" value="neutral" /><span>Neutral</span></label>
+              <label class="agree-btn"><input type="radio" name="e1" value="disagree" /><span>Disagree</span></label>
+            </div>
+          </div>
+          <div class="endorsement-item">
+            <p class="endorsement-text">"Hearing their baby's heartbeat at home provides meaningful emotional comfort and anxiety reduction to expectant mothers."</p>
+            <div class="agree-scale">
+              <label class="agree-btn"><input type="radio" name="e2" value="strongly-agree" /><span>Strongly Agree</span></label>
+              <label class="agree-btn"><input type="radio" name="e2" value="agree" /><span>Agree</span></label>
+              <label class="agree-btn"><input type="radio" name="e2" value="neutral" /><span>Neutral</span></label>
+              <label class="agree-btn"><input type="radio" name="e2" value="disagree" /><span>Disagree</span></label>
+            </div>
+          </div>
+          <div class="endorsement-item">
+            <p class="endorsement-text">"I would feel comfortable recommending the Sweety Song Doppler to my expecting patients as a supplementary home monitoring tool."</p>
+            <div class="agree-scale">
+              <label class="agree-btn"><input type="radio" name="e3" value="strongly-agree" /><span>Strongly Agree</span></label>
+              <label class="agree-btn"><input type="radio" name="e3" value="agree" /><span>Agree</span></label>
+              <label class="agree-btn"><input type="radio" name="e3" value="neutral" /><span>Neutral</span></label>
+              <label class="agree-btn"><input type="radio" name="e3" value="disagree" /><span>Disagree</span></label>
+            </div>
+          </div>
+          <div class="endorsement-item">
+            <p class="endorsement-text">"The ability to share heartbeat sounds with family strengthens bonding and involves the entire family in the pregnancy journey."</p>
+            <div class="agree-scale">
+              <label class="agree-btn"><input type="radio" name="e6" value="strongly-agree" /><span>Strongly Agree</span></label>
+              <label class="agree-btn"><input type="radio" name="e6" value="agree" /><span>Agree</span></label>
+              <label class="agree-btn"><input type="radio" name="e6" value="neutral" /><span>Neutral</span></label>
+              <label class="agree-btn"><input type="radio" name="e6" value="disagree" /><span>Disagree</span></label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recommendation fallback — shown if endorsements are not answered -->
+        <div class="recommendation-fallback" id="recommendation-fallback" style="display:none; margin-top:2rem; padding-top:1.5rem; border-top:1px solid rgba(155,109,181,0.2);">
+          <label class="question-label" style="margin-bottom:0.5rem;"><span class="q-num" style="background:#e8a0b5;">✦</span> Would you like to share a one-line recommendation instead?</label>
+          <p class="question-sublabel">This is optional. Your quote may be featured on our Amazon listing or marketing materials with your permission.</p>
+          <div class="radio-group" style="margin-bottom:1rem;">
+            <label class="radio-item"><input type="radio" name="q18-toggle" value="yes" id="q18-yes" /><span class="radio-custom"></span><span>Yes, I'd like to share a recommendation</span></label>
+            <label class="radio-item"><input type="radio" name="q18-toggle" value="no" id="q18-no" /><span class="radio-custom"></span><span>No, skip this question</span></label>
+          </div>
+          <div class="conditional-block" id="conditional-q18" style="display:none;">
+            <div class="quote-box">
+              <span class="quote-mark">"</span>
+              <textarea class="textarea textarea-quote" id="q18-quote" rows="2" placeholder="e.g. A must-have companion for every expecting mother between clinic visits…"></textarea>
+              <span class="quote-mark">"</span>
+            </div>
+            <div class="sub-question" style="margin-top:1.2rem;">
+              <label class="field-label">Attribution preference:</label>
+              <div class="radio-group">
+                <label class="radio-item"><input type="radio" name="q18-attr" value="full" /><span class="radio-custom"></span><span>Use my full name, specialization &amp; city</span></label>
+                <label class="radio-item"><input type="radio" name="q18-attr" value="partial" /><span class="radio-custom"></span><span>First name and specialization only</span></label>
+                <label class="radio-item"><input type="radio" name="q18-attr" value="anon" /><span class="radio-custom"></span><span>Keep anonymous (e.g. "A practising OB-GYN from Mumbai")</span></label>
+                <label class="radio-item"><input type="radio" name="q18-attr" value="none" /><span class="radio-custom"></span><span>Do not use my endorsements in marketing</span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ NAVIGATION ============ -->
+  <div class="nav-bar" id="nav-bar">
+    <button class="btn-secondary" id="btn-prev" type="button" disabled>← Back</button>
+    <div class="nav-center">
+      <span class="nav-section-label" id="nav-section-label">Section 1 of 4</span>
+    </div>
+    <button class="btn-primary" id="btn-next" type="button">Next →</button>
+    <button class="btn-submit" id="btn-submit" type="button" style="display:none;">Submit Survey 🎉</button>
+  </div>
+
+  <!-- ============ COMPLETION OVERLAY ============ -->
+  <div class="completion-overlay" id="completion-overlay">
+    <div class="completion-card">
+      <div class="completion-icon">🎉</div>
+      <h2>Thank You!</h2>
+      <p>Your expertise is shaping a product that will serve Indian mothers safely and effectively.</p>
+      <div class="completion-highlights">
+        <div class="ch-item">📊 Aggregated findings shared within 4 weeks</div>
+        <div class="ch-item">🏅 HCP Advisory Board invitations coming soon</div>
+      </div>
+      <div class="completion-brand">
+        <span class="partner easy">easy<span class="at">@</span>Home</span>
+        <span class="partner-divider">×</span>
+        <span class="partner premom">prem<span class="om">♡</span>m</span>
+      </div>
+      <p class="completion-footer">For questions: support@easyhealthcare.in · WhatsApp: +91-9048801872</p>
+    </div>
+  </div>
+
+  <script src="survey.js"></script>
+</body>
+</html>
