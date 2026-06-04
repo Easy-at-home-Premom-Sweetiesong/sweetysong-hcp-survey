@@ -220,11 +220,10 @@
   });
 
   // ================================================
-  // CONDITIONAL LOGIC (Q18 — Recommendation Fallback)
+  // CONDITIONAL LOGIC (Q18 — Recommendation Toggle)
   // ================================================
   const q18Radios = $$('input[name="q18-toggle"]');
   const conditionalQ18 = $('#conditional-q18');
-  const recommendationFallback = $('#recommendation-fallback');
 
   // Toggle quote block on Yes/No
   q18Radios.forEach((radio) => {
@@ -237,41 +236,6 @@
       }
     });
   });
-
-  // Check if any endorsement is answered
-  function hasEndorsementAnswered() {
-    const endorsementNames = ['e1', 'e2', 'e3', 'e6'];
-    return endorsementNames.some(name => {
-      return document.querySelector(`input[name="${name}"]:checked`) !== null;
-    });
-  }
-
-  // Show/hide recommendation fallback based on endorsement state
-  function updateRecommendationFallback() {
-    if (recommendationFallback) {
-      if (!hasEndorsementAnswered()) {
-        recommendationFallback.style.display = 'block';
-        recommendationFallback.style.animation = 'slideDown 0.4s ease both';
-      } else {
-        recommendationFallback.style.display = 'none';
-      }
-    }
-  }
-
-  // Listen to endorsement radio changes
-  $$('input[name="e1"], input[name="e2"], input[name="e3"], input[name="e6"]').forEach((radio) => {
-    radio.addEventListener('change', updateRecommendationFallback);
-  });
-
-  // Also show fallback when section 4 becomes active and no endorsements are answered
-  const origUpdateSection = updateSection;
-  updateSection = function() {
-    origUpdateSection();
-    if (state.currentSection === 4) {
-      // Small delay to let section render first
-      setTimeout(updateRecommendationFallback, 100);
-    }
-  };
 
   // ================================================
   // CHECKBOX LIMIT (Max N selections)

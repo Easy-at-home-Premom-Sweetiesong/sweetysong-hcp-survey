@@ -356,9 +356,37 @@
         </div>
       </div>
 
-      <!-- Q18 — Endorsement batch -->
+      <!-- Q18 — Recommendation + Endorsements -->
       <div class="question" id="q18">
         <label class="question-label"><span class="q-num">Q18</span> Professional Endorsements</label>
+
+        <!-- Recommendation -->
+        <div style="margin-bottom:2rem; padding-bottom:1.5rem; border-bottom:1px solid rgba(155,109,181,0.2);">
+          <label class="question-label" style="margin-bottom:0.5rem;"><span class="q-num" style="background:#e8a0b5;">✦</span> Would you like to share a one-line recommendation?</label>
+          <p class="question-sublabel">This is optional. Your quote may be featured on our Amazon listing or marketing materials with your permission.</p>
+          <div class="radio-group" style="margin-bottom:1rem;">
+            <label class="radio-item"><input type="radio" name="q18-toggle" value="yes" id="q18-yes" /><span class="radio-custom"></span><span>Yes, I'd like to share a recommendation</span></label>
+            <label class="radio-item"><input type="radio" name="q18-toggle" value="no" id="q18-no" /><span class="radio-custom"></span><span>No, skip this question</span></label>
+          </div>
+          <div class="conditional-block" id="conditional-q18" style="display:none;">
+            <div class="quote-box">
+              <span class="quote-mark">"</span>
+              <textarea class="textarea textarea-quote" id="q18-quote" rows="2" placeholder="e.g. A must-have companion for every expecting mother between clinic visits…"></textarea>
+              <span class="quote-mark">"</span>
+            </div>
+            <div class="sub-question" style="margin-top:1.2rem;">
+              <label class="field-label">Attribution preference:</label>
+              <div class="radio-group">
+                <label class="radio-item"><input type="radio" name="q18-attr" value="full" /><span class="radio-custom"></span><span>Use my full name, specialization &amp; city</span></label>
+                <label class="radio-item"><input type="radio" name="q18-attr" value="partial" /><span class="radio-custom"></span><span>First name and specialization only</span></label>
+                <label class="radio-item"><input type="radio" name="q18-attr" value="anon" /><span class="radio-custom"></span><span>Keep anonymous (e.g. "A practising OB-GYN from Mumbai")</span></label>
+                <label class="radio-item"><input type="radio" name="q18-attr" value="none" /><span class="radio-custom"></span><span>Do not use my endorsements in marketing</span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Endorsements -->
         <p class="question-sublabel">Please indicate your agreement. Endorsed statements may be used in our Amazon listing and marketing materials with your permission.</p>
         <div class="endorsement-grid" id="endorsement-grid">
           <div class="endorsement-item">
@@ -395,32 +423,6 @@
               <label class="agree-btn"><input type="radio" name="e6" value="agree" /><span>Agree</span></label>
               <label class="agree-btn"><input type="radio" name="e6" value="neutral" /><span>Neutral</span></label>
               <label class="agree-btn"><input type="radio" name="e6" value="disagree" /><span>Disagree</span></label>
-            </div>
-          </div>
-        </div>
-
-        <!-- Recommendation fallback — shown if endorsements are not answered -->
-        <div class="recommendation-fallback" id="recommendation-fallback" style="display:none; margin-top:2rem; padding-top:1.5rem; border-top:1px solid rgba(155,109,181,0.2);">
-          <label class="question-label" style="margin-bottom:0.5rem;"><span class="q-num" style="background:#e8a0b5;">✦</span> Would you like to share a one-line recommendation instead?</label>
-          <p class="question-sublabel">This is optional. Your quote may be featured on our Amazon listing or marketing materials with your permission.</p>
-          <div class="radio-group" style="margin-bottom:1rem;">
-            <label class="radio-item"><input type="radio" name="q18-toggle" value="yes" id="q18-yes" /><span class="radio-custom"></span><span>Yes, I'd like to share a recommendation</span></label>
-            <label class="radio-item"><input type="radio" name="q18-toggle" value="no" id="q18-no" /><span class="radio-custom"></span><span>No, skip this question</span></label>
-          </div>
-          <div class="conditional-block" id="conditional-q18" style="display:none;">
-            <div class="quote-box">
-              <span class="quote-mark">"</span>
-              <textarea class="textarea textarea-quote" id="q18-quote" rows="2" placeholder="e.g. A must-have companion for every expecting mother between clinic visits…"></textarea>
-              <span class="quote-mark">"</span>
-            </div>
-            <div class="sub-question" style="margin-top:1.2rem;">
-              <label class="field-label">Attribution preference:</label>
-              <div class="radio-group">
-                <label class="radio-item"><input type="radio" name="q18-attr" value="full" /><span class="radio-custom"></span><span>Use my full name, specialization &amp; city</span></label>
-                <label class="radio-item"><input type="radio" name="q18-attr" value="partial" /><span class="radio-custom"></span><span>First name and specialization only</span></label>
-                <label class="radio-item"><input type="radio" name="q18-attr" value="anon" /><span class="radio-custom"></span><span>Keep anonymous (e.g. "A practising OB-GYN from Mumbai")</span></label>
-                <label class="radio-item"><input type="radio" name="q18-attr" value="none" /><span class="radio-custom"></span><span>Do not use my endorsements in marketing</span></label>
-              </div>
             </div>
           </div>
         </div>
