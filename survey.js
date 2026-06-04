@@ -320,6 +320,7 @@
       endorsement_2:        formData['e2'] || '',
       endorsement_3:        formData['e3'] || '',
       endorsement_4:        formData['e6'] || '',
+      own_quote:            formData['q18-own-quote'] || '',
       one_line_quote:       formData['q18-quote'] || '',
       attribution:          formData['q18-attr'] || '',
       one_thing:            formData['q20-text'] || '',
